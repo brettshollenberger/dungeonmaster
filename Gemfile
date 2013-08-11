@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg'
 gem 'thin'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -11,6 +12,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
 end
 
 group :assets do

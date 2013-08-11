@@ -7,6 +7,11 @@ describe Character do
     expect(character).to be_valid
   end
 
+  it "is not valid without a class" do
+    character.character_class = nil
+    expect(character).to_not be_valid
+  end
+
   it "is not valid without a user" do
     character.user = nil
     expect(character).to_not be_valid

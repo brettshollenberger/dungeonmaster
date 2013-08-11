@@ -11,5 +11,10 @@ FactoryGirl.define do
     level 1
     experience 1
     user
+    character_class
+  end
+
+  factory :character_class do
+    name "Elf"
   end
 end

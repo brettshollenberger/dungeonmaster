@@ -1,6 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="span12">
+
+      <!-- Character Stats -->
       <h1><%= @character.full_name %></h1>
       <table class="table table-striped">
         <thead>
@@ -31,7 +33,9 @@
           <td><%= @character.sex_appeal %></td>
         </tbody>
       </table>
+      <!-- End Character Stats -->
 
+      <!-- Pets -->
       <% unless @character.pets.empty? %>
         <h1>Pets</h1>
         <table class="table table-striped">
@@ -49,9 +53,13 @@
           </tbody>
         </table>
       <% end %>
+      <!-- End Pets -->
 
+      <!-- Links -->
+      <%= link_to "Edit #{@character.first_name}", edit_character_path(@character), :class => "btn btn-warning" %>
       <%= link_to "View All Characters", characters_path, :class => "btn btn-primary" %>
       <%= link_to "Create Pet for Character", new_character_pet_path(@character), :class => "btn btn-success" %>
+      <!-- End Links -->
     </div>
   </div>
 </div>

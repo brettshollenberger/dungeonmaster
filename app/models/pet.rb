@@ -7,4 +7,8 @@ class Pet < ActiveRecord::Base
   }
 
   belongs_to :character
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

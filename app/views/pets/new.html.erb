@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>New Pet for <%= @character.full_name %></h1>
+      <%= form_for [@character, @pet] do |f| %>
+
+        <%= f.label :first_name, "First Name" %>
+        <%= f.text_field :first_name %>
+
+        <%= f.label :last_name, "Last Name" %>
+        <%= f.text_field :last_name %>
+
+        <%= f.label :hp, "HP" %>
+        <%= f.text_field :hp %>
+
+        <%= f.hidden_field :character_id, :value => @character.id %>
+
+        <br><br>
+
+        <%= f.submit "Create Pet", :class => "btn btn-primary" %>
+
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -25,7 +25,7 @@
           <tbody>
             <% @characters.each do |character| %>
               <tr>
-                <td><%= character.full_name %></td>
+                <td><%= link_to "#{character.full_name}", character_path(character) %></td>
                 <td><%= character.charclass %></td>
                 <td><%= character.level %></td>
                 <td><%= character.experience %></td>

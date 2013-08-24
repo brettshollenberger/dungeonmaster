@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1><%= @pet.full_name %></h1>
+      <p><%= @character.full_name %>'s pet</p>
+      <table class="table table-striped">
+        <thead>
+          <th>HP</th>
+        </thead>
+        <tbody>
+          <tr>
+          <td><%= @pet.hp %></td>
+        </tbody>
+      </table>
+      <%= link_to "View All Characters", characters_path, :class => "btn btn-primary" %>
+      <%= link_to "Return to #{@character.first_name}", character_path(@character), :class => "btn btn-primary" %>
+    </div>
+  </div>
+</div>

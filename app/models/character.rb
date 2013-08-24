@@ -19,6 +19,7 @@ class Character < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :character_class
+  has_many :pets
 
   def charclass
     character_class.name

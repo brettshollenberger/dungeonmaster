@@ -25,4 +25,11 @@ FactoryGirl.define do
   factory :character_class do
     name "Elf"
   end
+
+  factory :pet do
+    first_name "Pet"
+    last_name "of Doom"
+    hp 6
+    character
+  end
 end

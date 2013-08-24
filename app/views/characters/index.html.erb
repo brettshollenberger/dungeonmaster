@@ -29,7 +29,7 @@
                 <td><%= character.charclass %></td>
                 <td><%= character.level %></td>
                 <td><%= character.experience %></td>
-                <td><%= character.user.email %></td>
+                <td><%= character.user.username %></td>
                 <td><%= link_to "Edit", edit_character_path(character) %></td>
                 <td><%= link_to "Banish", character_path(character), method: :delete %></td>
               </tr>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130824064058) do
+ActiveRecord::Schema.define(:version => 20130824070307) do
 
   create_table "character_classes", :force => true do |t|
     t.string   "name",       :null => false
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20130824064058) do
 
   create_table "pets", :force => true do |t|
     t.string   "first_name",                  :null => false
-    t.string   "last_name",                   :null => false
+    t.string   "last_name"
     t.integer  "hp",           :default => 6, :null => false
     t.integer  "character_id",                :null => false
     t.datetime "created_at",                  :null => false

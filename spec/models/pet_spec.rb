@@ -17,11 +17,6 @@ describe Pet do
     expect(pet).to_not be_valid
   end
 
-  it "is invalid without a last_name" do
-    pet.last_name = nil
-    expect(pet).to_not be_valid
-  end
-
   it "is invalid without hit points" do
     pet.hp = nil
     expect(pet).to_not be_valid

@@ -1,4 +1,13 @@
 <div class="container">
+  <% if @errors %>
+    <div class="row alert alert-error">
+      <div class="span12 error">
+        <% @errors.each do |error| %>
+          <p><%= error[1][0] %></p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
   <div class="row">
     <div class="span12">
       <h1>New Pet for <%= @character.full_name %></h1>
@@ -12,6 +21,18 @@
 
         <%= f.label :hp, "HP" %>
         <%= f.text_field :hp %>
+
+        <%= f.label :strength, "Strength" %>
+        <%= f.text_field :strength %>
+
+        <%= f.label :luck, "Luck" %>
+        <%= f.text_field :luck %>
+
+        <%= f.label :intelligence, "Intelligence" %>
+        <%= f.text_field :intelligence %>
+
+        <%= f.label :sex_appeal, "Sex Appeal" %>
+        <%= f.text_field :sex_appeal %>
 
         <%= f.hidden_field :character_id, :value => @character.id %>
 

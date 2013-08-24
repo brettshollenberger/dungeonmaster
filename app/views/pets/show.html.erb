@@ -6,10 +6,22 @@
       <table class="table table-striped">
         <thead>
           <th>HP</th>
+          <th>Level</th>
+          <th>Experience</th>
+          <th>Str.</th>
+          <th>Luck</th>
+          <th>Int.</th>
+          <th>Sexy</th>
         </thead>
         <tbody>
           <tr>
-          <td><%= @pet.hp %></td>
+            <td><%= @pet.hp %></td>
+            <td><%= @pet.level %></td>
+            <td><%= @pet.experience %></td>
+            <td><%= @pet.strength %></td>
+            <td><%= @pet.luck %></td>
+            <td><%= @pet.intelligence %></td>
+            <td><%= @pet.sex_appeal %></td>
         </tbody>
       </table>
       <%= link_to "View All Characters", characters_path, :class => "btn btn-primary" %>

@@ -5,5 +5,5 @@ Dungeonmaster::Application.routes.draw do
     resources :pets
   end
 
-  root to: "application#index"
+  root to: "characters#index"
 end

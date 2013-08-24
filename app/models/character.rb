@@ -28,4 +28,13 @@ class Character < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def update_level
+    if self.experience < 1000
+      self.level = 1
+    elsif self.experience >= 1000 && self.experience < 3000
+      self.level = 2
+    end
+    self.save
+  end
 end

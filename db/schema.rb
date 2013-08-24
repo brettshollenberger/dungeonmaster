@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130811212923) do
+ActiveRecord::Schema.define(:version => 20130824034350) do
 
   create_table "character_classes", :force => true do |t|
     t.string   "name",       :null => false
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(:version => 20130811212923) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.integer  "character_class_id",                :null => false
+    t.integer  "strength",           :default => 0, :null => false
+    t.integer  "height",                            :null => false
+    t.integer  "weight",                            :null => false
+    t.integer  "luck",               :default => 0, :null => false
+    t.integer  "sex_appeal",         :default => 0, :null => false
+    t.integer  "intelligence",       :default => 0, :null => false
+    t.integer  "gold",               :default => 0, :null => false
+    t.integer  "hp",                 :default => 6, :null => false
   end
 
   create_table "users", :force => true do |t|

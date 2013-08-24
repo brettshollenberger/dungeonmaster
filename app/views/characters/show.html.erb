@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1><%= @character.full_name %></h1>
+      <table class="table table-striped">
+        <thead>
+          <th>Class</th>
+          <th>Level</th>
+          <th>HP</th>
+          <th>Experience</th>
+          <th>Gold</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Str.</th>
+          <th>Int.</th>
+          <th>Luck</th>
+          <th>Sexy</th>
+        </thead>
+        <tbody>
+          <tr>
+          <td><%= @character.charclass %></td>
+          <td><%= @character.level %></td>
+          <td><%= @character.hp %></td>
+          <td><%= @character.experience %></td>
+          <td><%= @character.gold %></td>
+          <td><%= @character.height %></td>
+          <td><%= @character.weight %></td>
+          <td><%= @character.strength %></td>
+          <td><%= @character.intelligence %></td>
+          <td><%= @character.luck %></td>
+          <td><%= @character.sex_appeal %></td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

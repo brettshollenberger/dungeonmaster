@@ -8,8 +8,16 @@ FactoryGirl.define do
   factory :character do
     first_name "Dungeon"
     last_name "Master"
+    hp 6
     level 1
-    experience 1
+    experience 0
+    height 6
+    weight 200
+    strength 5
+    luck 10
+    intelligence 10
+    sex_appeal 15
+    gold 500
     user
     character_class
   end

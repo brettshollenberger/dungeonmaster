@@ -1,12 +1,30 @@
 class Character < ActiveRecord::Base
-  attr_accessible :experience, :first_name, :last_name, :level, :user, :character_class
+  attr_accessible :experience, :first_name, 
+  :last_name, :hp, :level, :user, :character_class,
+  :height, :weight, :strength, :luck, :intelligence,
+  :sex_appeal, :gold
 
-  validates :experience, :first_name, :last_name, :level, :user, :character_class,
-    presence: true
+  validates :experience, :first_name, :last_name, 
+    :hp, :level, :user, :character_class,
+    :height, :weight, :strength, :luck, 
+    :intelligence, :sex_appeal, :gold, {
+      presence: true
+    }
 
-  validates :experience, :level,
-    numericality: true
+  validates :experience, :level, :hp, :height, 
+    :weight, :strength, :luck, :intelligence, 
+    :sex_appeal, :gold, {
+      numericality: true
+    }
 
   belongs_to :user
   belongs_to :character_class
+
+  def charclass
+    character_class.name
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

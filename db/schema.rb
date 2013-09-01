@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130831233724) do
+ActiveRecord::Schema.define(:version => 20130901002421) do
 
   create_table "character_classes", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "character_moves", :force => true do |t|
+    t.integer  "character_id", :null => false
+    t.integer  "move_id",      :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "characters", :force => true do |t|

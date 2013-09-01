@@ -20,6 +20,7 @@ class Character < ActiveRecord::Base
   belongs_to :user
   belongs_to :character_class
   has_many :pets
+  has_and_belongs_to_many :moves
 
   def charclass
     character_class.name

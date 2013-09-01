@@ -48,4 +48,9 @@ FactoryGirl.define do
     dice_type 2
     range 20
   end
+
+  factory :character_move, :class => 'CharacterMoves' do
+    character_id 1
+    move_id 1
+  end
 end

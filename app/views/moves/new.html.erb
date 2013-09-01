@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>New Move</h1>
+      <%= form_for @move do |f| %>
+
+        <%= f.label :title, "Title" %>
+        <%= f.text_field :title %>
+
+        <%= f.label :description, "Description" %>
+        <%= f.text_area :description %>
+
+        <%= f.label :frequency, "Frequency" %>
+        <%= f.select :frequency, ["At will", "Encounter", "Daily"]  %>
+
+        <%= f.label :character_class_id, "Class" %>
+        <%= f.select :character_class_id, ["Wizard", "Monk", "Elf", "Dark Elf", "Troll", "Warrior", "Barbarian", "Mage", "Battle Mage", "Bard", "Goblin" ] %>
+
+        <%= f.label :number_of_dice, "Number of Dice" %>
+        <%= f.select :number_of_dice, ["1", "2", "3", "4", "5", "6"] %>
+
+        <%= f.label :dice_type, "Type of Die" %>d
+        <%= f.select :dice_type, ["2", "4", "6", "8", "10", "12", "20"] %>
+
+        <%= f.label :range, "Range (# of squares)" %>
+        <%= f.text_field :range %>
+
+        <br><br>
+
+        <%= f.submit "Create Move", :class => "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

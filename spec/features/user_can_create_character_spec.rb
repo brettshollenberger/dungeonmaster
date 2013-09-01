@@ -13,7 +13,7 @@ feature 'Character Creation' do
     visit new_character_path
     fill_in "First Name", with: "Aldo"
     fill_in "Last Name", with: "Leopold"
-    select "Elf", from: "Class"
+    select "Wizard", from: "Class"
     fill_in "Height", with: "5"
     fill_in "Weight", with: "150"
     click_on "Create Character"

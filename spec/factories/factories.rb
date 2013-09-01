@@ -23,7 +23,7 @@ FactoryGirl.define do
   end
 
   factory :character_class do
-    name "Elf"
+    name "Wizard"
   end
 
   factory :pet do
@@ -37,5 +37,15 @@ FactoryGirl.define do
     intelligence 10
     sex_appeal   10
     character
+  end
+
+  factory :move do
+    frequency "At will"
+    title "Magic Missile"
+    description "A wizard's best friend"
+    character_class_id 1
+    number_of_dice 1
+    dice_type 2
+    range 20
   end
 end

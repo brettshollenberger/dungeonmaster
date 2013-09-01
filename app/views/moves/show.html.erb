@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+
+      <h1><%= @move.title %></h1>
+      <table class="table table-striped">
+        <thead>
+          <th>Description</th>
+          <th>Class</th>
+          <th>Frequency</th>
+          <th>Attack</th>
+          <th>Range</th>
+        </thead>
+        <tbody>
+          <tr>
+          <td><%= @move.description %></td>
+          <td><%= @move.character_class.name %></td>
+          <td><%= @move.frequency %></td>
+          <td><%= "#{@move.number_of_dice}d#{@move.dice_type}" %></td>
+          <td><%= @move.range %></td>
+        </tbody>
+      </table>
+
+      <!-- Links -->
+      <%= link_to "View All Characters", characters_path, :class => "btn btn-primary" %>
+      <%= link_to "Create Another Move", new_move_path, :class => "btn btn-success" %>
+      <!-- End Links -->
+    </div>
+  </div>
+</div>
